@@ -20,9 +20,7 @@ def submitData():
 
     subTotal = int(data1) + int(data2) + int(data3) + int(data4) + int(data5)
     print("subTotal", subTotal)
-    percentage = int(subTotal) * ( 100 / 500 )
-
-    if percentage:
+    if percentage := int(subTotal) * (100 / 500):
         print("percentage", percentage)
         # left with database integration
         return render_template("index.html", result = { "percentage": percentage })
